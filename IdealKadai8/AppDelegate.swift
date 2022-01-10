@@ -9,7 +9,8 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+   // スライダーの位置はここに保持するようにします（AppDelegateをデータの置き場として使うのは責務的には正しくないのですが、入門時点ではここに置くのは許容します）
+    var shardValue: Float = 0.0
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
