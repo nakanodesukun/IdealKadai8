@@ -8,11 +8,11 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var slider: UISlider!
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var slider: UISlider!
 
     
-    var delegate: AppDelegate {
+  private var delegate: AppDelegate {
         UIApplication.shared.delegate as! AppDelegate
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -21,7 +21,7 @@ class SecondViewController: UIViewController {
         resultLabel.text = String(delegate.shardValue)
     }
     
-    @IBAction func changeSlider(sender: Any) {
+    @IBAction private func changeSlider(sender: Any) {
         delegate.shardValue = slider.value
         resultLabel.text = String(delegate.shardValue)
     }
